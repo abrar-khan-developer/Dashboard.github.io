@@ -41,7 +41,7 @@ var options = {
       distributed: true,
       borderRadius: 6,
       borderRadiusApplication: 'end',
-      columnWidth: '45%',
+      columnWidth: '40%',
     }
   },
   dataLabels: {
