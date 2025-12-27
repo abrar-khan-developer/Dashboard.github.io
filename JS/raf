@@ -1,0 +1,76 @@
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
+
+function opensidebar() {
+    if(!sidebarOpen) {
+        sidebar.classList.add("sidebar-responsive");
+        sidebarOpen = true;
+    }
+}
+
+function closeSidebar() {
+    if(sidebarOpen) {
+        sidebar.classList.remove("sidebar-responsive");
+        sidebarOpen = false;
+    }
+}
+
+//  <------- ApexCharts ------> 
+//  <------- Bar Chart start------>
+ var options = {
+          series: [{
+          data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+          name: 'Products'
+        }],
+          chart: {
+          type: 'bar',
+          background: 'transparent',
+          height: 350,
+          toolbar: {
+            show: false,
+          }
+        },
+        colors: [
+            "#2962ff",
+            "#d50000",
+            "#2e7d32",
+            "#ff6d00",
+            "#583cb3",
+        ],
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            distributed: true,
+            borderRadiusApplication: 'end',
+            horizontal: false,
+            columnWidth: '40%',
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        xaxis: {
+          categories: ['Laptop','Phone','Monitor','Headphones','Camera'
+          ],
+          title:{
+            style: {
+                color : '#f5f7ff'
+            }
+          },
+          axisBorder: {
+            show: true,
+            color: '#55596e'
+          },
+          axisTicks: {
+            show: true,
+            color: '#55596e'
+        }
+          title:{
+            style: {
+                color : '#f5f7ff'
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#bar-chart"), options);
+        chart.render();
+  
