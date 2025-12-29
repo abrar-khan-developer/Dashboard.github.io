@@ -65,4 +65,4 @@ Frontend Web Developer
 
 ## 📸 Project Screenshot
 
-![Project Preview](./Image/preview.png)
+./Images/preview.png
